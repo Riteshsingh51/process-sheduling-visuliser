@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Scheduling Visualizer</title>
+    <link rel="stylesheet" href="process.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Process Scheduling Visualizer</h1>
+        <form id="processForm">
+            <label for="numProcesses">Enter number of processes:</label>
+            <input type="number" id="numProcesses" min="1" max="100" required>
+            <button type="submit">Generate</button>
+        </form>
+
+        <div id="inputFieldsContainer"></div>
+        <button id="calculateBtn" onclick="calculateScheduling()" style="display:none;">Calculate</button>
+
+        <div id="results">
+            <h2>Results</h2>
+            <p id="averageWaitingTime">Average Waiting Time: </p>
+            <p id="averageTurnaroundTime">Average Turnaround Time: </p>
+            <div id="processVisualization"></div>
+        </div>
+    </div>
+    <script src="process.js"></script>
+</body>
+</html>
